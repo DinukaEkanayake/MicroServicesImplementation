@@ -1,0 +1,41 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+  port: 8081
+  tomcat:
+    relaxed-query-chars: [ '{','}' ]
+
+spring:
+  datasource:
+    password: Dinuka1999
+    url: jdbc:mysql://localhost:3306/emaildb?createDatabaseIfNotExist=true
+    username: root
+    driver-class-name=com: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    show-sql: true
+
+  mail:
+    host: sandbox.smtp.mailtrap.io
+    port: 587
+    username: 2c603bef935ba7
+    password: ebe0f407faeb13
+
+    properties:
+      mail:
+        smtp:
+          ssl:
+            trust: "*"
+          auth: true
+          starttls:
+            enable: true
+
+
+
+
